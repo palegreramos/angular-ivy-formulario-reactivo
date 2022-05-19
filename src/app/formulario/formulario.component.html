@@ -9,10 +9,10 @@
       [formControl]="email"
     />
     <div *ngIf="email.touched">
-      <em class="form-text" *ngIf="email.invalid && email?.errors.required"
+      <em class="form-text" *ngIf="email.invalid && email?.hasError('required')"
         >El email es obligatorio</em
       >
-      <em class="form-text" *ngIf="email.invalid && email?.errors.email"
+      <em class="form-text" *ngIf="email.invalid && email?.hasError('email')"
         >El email no es válido</em
       >
     </div>
